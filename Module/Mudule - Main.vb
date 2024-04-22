@@ -9,7 +9,7 @@ Imports Microsoft.Office.Interop
 Imports System.Threading
 Imports Tulpep.NotificationWindow
 Module Mudule___Main
-    Public sqlConnect As String = "Provider=SQLOLEDB;Server=calsw00158;Database=CAPAB800DB;User Id=calcapaadm;Password = calb800capa_us3r;"
+    Public sqlConnect As String = "Provider=SQLOLEDB;"
     Public myConn As New OleDb.OleDbConnection
     Public mySQLConn As SqlConnection
     Public cmd As New OleDb.OleDbCommand
@@ -83,7 +83,7 @@ Module Mudule___Main
         '//====================================================================================
         Dim ProcessStartInfo As New System.Diagnostics.ProcessStartInfo
         ProcessStartInfo.FileName = "net"
-        ProcessStartInfo.Arguments = "use \\cal-eeassysvroi\c$ /USER:cal_eeassysvr @ss3mbly"
+        ProcessStartInfo.Arguments = ""
         ProcessStartInfo.WindowStyle = ProcessWindowStyle.Hidden
         System.Diagnostics.Process.Start(ProcessStartInfo)
 
