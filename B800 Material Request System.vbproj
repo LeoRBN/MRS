@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0480C68D-4058-441C-AFD3-E60225E41969}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>B800_Material_Request_System.My.MyApplication</StartupObject>
+    <RootNamespace>B800_Material_Request_System</RootNamespace>
+    <AssemblyName>B800 Material Request System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>C:\2. Build\MRSv2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\..\2. Build\MRSv2\</OutputPath>
+    <DocumentationFile>B800 Material Request System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>B800 Material Request System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Folder.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\2. Build\DLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\2. Build\DLL\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Kitting\AU-frm\AU-Insert.Designer.vb">
+      <DependentUpon>AU-Insert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\AU-frm\AU-Insert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\AU-frm\AU-ReturnAll.Designer.vb">
+      <DependentUpon>AU-ReturnAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\AU-frm\AU-ReturnAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\AU-frm\Au-Transaction.Designer.vb">
+      <DependentUpon>Au-Transaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\AU-frm\Au-Transaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\TransactionHistory.Designer.vb">
+      <DependentUpon>TransactionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\TransactionHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\UpdateRAW.Designer.vb">
+      <DependentUpon>UpdateRAW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\UpdateRAW.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Docs_Handler.vb" />
+    <Compile Include="Kitting\Epoxy-Transaction.Designer.vb">
+      <DependentUpon>Epoxy-Transaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\Epoxy-Transaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\Main-Kitting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\Main-Kitting.Designer.vb">
+      <DependentUpon>Main-Kitting.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\NewEndorseRaw.Designer.vb">
+      <DependentUpon>NewEndorseRaw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\NewEndorseRaw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\RawTransaction.Designer.vb">
+      <DependentUpon>RawTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\RawTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitting\RawUpload.Designer.vb">
+      <DependentUpon>RawUpload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting\RawUpload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading.designer.vb">
+      <DependentUpon>loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Setting\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Mudule - Main.vb" />
+    <Compile Include="Module\Scanner.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Production\AU\Gold-Return.Designer.vb">
+      <DependentUpon>Gold-Return.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\AU\Gold-Return.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\AU\Gold-Trans.Designer.vb">
+      <DependentUpon>Gold-Trans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\AU\Gold-Trans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\DM-Request.Designer.vb">
+      <DependentUpon>DM-Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\DM-Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Epoxy-Update.Designer.vb">
+      <DependentUpon>Epoxy-Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Epoxy-Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\AU\Gold-Request.Designer.vb">
+      <DependentUpon>Gold-Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\AU\Gold-Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\AU\Gold-SendReq.Designer.vb">
+      <DependentUpon>Gold-SendReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\AU\Gold-SendReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\IDM_Req.Designer.vb">
+      <DependentUpon>IDM_Req.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\IDM_Req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\Matrix-setup.Designer.vb">
+      <DependentUpon>Matrix-setup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Matrix-setup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\Setting.Designer.vb">
+      <DependentUpon>Setting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Setting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartPage.Designer.vb">
+      <DependentUpon>StartPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Kitting\AU-frm\AU-Insert.resx">
+      <DependentUpon>AU-Insert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\AU-frm\AU-ReturnAll.resx">
+      <DependentUpon>AU-ReturnAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\AU-frm\Au-Transaction.resx">
+      <DependentUpon>Au-Transaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\Epoxy-Transaction.resx">
+      <DependentUpon>Epoxy-Transaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\Main-Kitting.resx">
+      <DependentUpon>Main-Kitting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\NewEndorseRaw.resx">
+      <DependentUpon>NewEndorseRaw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\RawTransaction.resx">
+      <DependentUpon>RawTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\RawUpload.resx">
+      <DependentUpon>RawUpload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\TransactionHistory.resx">
+      <DependentUpon>TransactionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitting\UpdateRAW.resx">
+      <DependentUpon>UpdateRAW.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\AU\Gold-Return.resx">
+      <DependentUpon>Gold-Return.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\AU\Gold-Trans.resx">
+      <DependentUpon>Gold-Trans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\DM-Request.resx">
+      <DependentUpon>DM-Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\Epoxy-Update.resx">
+      <DependentUpon>Epoxy-Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\AU\Gold-Request.resx">
+      <DependentUpon>Gold-Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\AU\Gold-SendReq.resx">
+      <DependentUpon>Gold-SendReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\IDM_Req.resx">
+      <DependentUpon>IDM_Req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Matrix-setup.resx">
+      <DependentUpon>Matrix-setup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Setting.resx">
+      <DependentUpon>Setting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEDefault.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webalys-Kameleon.pics-Gold-Cart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ST_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn Form APp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wav files\AU_notif.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wav files\Low_notif.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wav files\combo_low.wav" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
